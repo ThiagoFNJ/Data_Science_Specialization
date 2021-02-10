@@ -1,0 +1,21 @@
+---
+title: "Baixando e lendo dados"
+author: "Thiago Nogueira"
+date: "10/02/2021"
+output: html_document
+---
+
+## Baixando dados
+
+Pode ser mais cômodo navegar até o site fonte e fazer o download através do _point-and-click_. Contudo, incluir o processo de download de dados no script contribui para a reproductibilidade do seu trabalho. 
+
+Para obter dados de uma fonte externa usamos a função download.file:
+
+fileUrl <- "www.urldosdados.com/donwload/dado.csv"
+download.file(fileUrl, destfile = "./data/raw_data.csv", method = "curl")
+
+É importante registrar a data de download dos dados, uma vez que, em muitos casos, existe uma atualização constante.
+
+dateDownloaded <- date()
+
+
