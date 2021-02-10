@@ -1,0 +1,59 @@
+---
+title: "Encontrando e lendo dados"
+author: "Thiago Nogueira"
+date: "09/02/2021"
+output: html_document
+---
+
+## Dados
+
+De acordo com o artigo da Wikipedia:
+
+>Dados são valores de variáveis qualitativas ou quantitativas, pertencentes a um conjunto de itens.
+
+Tais itens podem ser registros financeiros, dados de uma população, históricos de desastres naturais em uma cidade, por exemplo. 
+Eles podem ser **estruturados**, quando seguem algum padrão de tabulação ou outra formatação que facilita a análise, ou **não estruturados**, como vídeos, imagens, arquivos de áudio, etc. 
+
+## Dados brutos e dados processados. 
+
+A maior parte do tempo em um pipeline de ciência de dados é gasta coletando e tratando os dados. Podemos identificar as diferenças entre a matéria prima bruta e a processada:
+
+**Raw data (dados brutos)**
+
+1. Vindos direto da fonte
+2. Muitas vezes difíceis de analisar
+3. Com ruído ou sujeira
+
+**Processed data (dados processados)**
+
+1. Dados que estão prontos para a análise
+2. Seguem um padrão de formatação e boas práticas
+
+## Por que tratar dados?
+
+Mesmo quando o dado coletado segue um certo padrão de estrutura, muitas vezes eles não estarão na estrutura adequada para a análise pretendida, ou mesmo possuem algum tipo de ruído que precisa ser removido antes da aplicação de métodos estatístico-computacionais. A etapa de tratamento de dados é de **extrema importância**, uma vez que os dados podem ser enviesados ao se remover certa parte de uma amostra. Todas as etapas de tratamento devem ser executadas com extrema atenção e devem ser documentadas, justificando as escolhas. 
+
+Ao final do processamento dos dados você deve ter quatro coisas:
+
+1. Os dados brutos;
+    - Sem nenhum dado ou variável removida;
+    - Sem que tenha sido executado nenhum programa sobre eles. 
+2. Um dataset processado, também chamado de tidy dataset;
+    - Cada variável deve estar em uma coluna;
+    - Cada diferente observação deve estar em uma linha;
+    - Se houverem multiplas tabelas, deve haver uma varíavel que as conecte;
+    - Incluir uma linha no início com os nomes de cada variável;
+    - É preferívle que o nome das variáveis sejam legíveis e auto-descritivas;
+3. Um code book descrevendo cada variável e seus valores no tidy dataset. 
+    - Informação sobre cada variável - **incluindo as unidades** - contidas no dataset;
+    - Informações sobre as escolhas de sumarisação (como agregar usando médias ou soma);
+    - Informações sobre o seu design de pesquisa: o que são os dados e como eles foram coletados, etc.
+    - Geralmente está em formato de texto ou em um notebook e markdown. 
+    - Deve ter as seções "Code book" e "Study design"
+4. Uma receita explicita e exata que você usou para sair do ponto 1 e chegar aos pontos 2 e 3.
+    - Um script ou notebook/markdown; 
+    - Deve ter como entrada os dados brutos e como saída os dados tidy.
+    - Não devem haver parâmetros: um segundo usuário deve obter os mesmos dados que você obteve.
+    4.4) No caso de alguma das etapas ter sido executada em um outro software, o passo a passo dessa execução também deve ser documentado. 
+
+
